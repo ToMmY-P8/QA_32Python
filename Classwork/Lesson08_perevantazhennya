@@ -1,0 +1,60 @@
+# class Number:
+#     def __init__(self, n):
+#         self.number = n
+
+#     def __add__(self, other):
+#         sum = self.number + other.number
+#         return Number(sum)
+
+#     def __radd__(self, other):
+#         if type (other) == int:
+#             return self.number + other
+#         elif type (other) == float:
+#             return self.number + other
+        
+#     def __sub__(self, other):
+#         sub = self.number - other.number
+#         return Number(sub)
+
+#     def __mul__(self, other):
+#         mul = self.number * other.number
+#         return Number(mul)
+
+#     def __truediv__(self, other):
+#         div = self.number / other.number
+#         return Number(div)
+
+#     def __str__(self):
+#         return str(self.number)
+
+
+# num1 = Number(6)
+# num2 = Number(2)
+
+# sum = 3.5 + num2
+# sub = num1 - num2
+# mul = num1 * num2
+# div = num1 / num2
+
+# print("Сума: ", sum)
+# print("Різниця: ", sub)
+# print("Добуток: ", mul)
+# print("Частка: ", div)
+
+# Завдання №2
+class Fruction:
+    def __init__(self, n, d):
+        self.numerator = n
+        self.denominator = d
+    def __mul__(self, other):
+        mul = Fruction(self.numerator * other.numerator, self.denominator * other.denominator)
+        return mul
+    def __str__(self) :
+        return str(self.numerator) + '/' + str(self.denominator)
+    
+fruc1 = Fruction(1,2)
+fruc2 = Fruction(1,2)
+
+mul=fruc1 * fruc2
+
+print("Добуток: ", mul)
