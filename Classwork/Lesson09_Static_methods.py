@@ -1,4 +1,5 @@
 class Human:
+    count = 0
     def __init__(self):
         self.fullname = ''
         self.birthdate = ''
@@ -6,6 +7,7 @@ class Human:
         self.country = ''
         self.city = ''
         self.home_address = ''
+        Human.count += 1
     def input_data(self):
         self.fullname = input("Введіть ПІБ: ")
         self.birthdate = input("Введіть дату нарождення: ")
@@ -23,7 +25,7 @@ class Human:
     def getFullname(self):
         return self.fullname
     def setFullname(self,fullname):
-        self.fullname = fullname
+            self.fullname = fullname
     def getBirthdate(self):
         return self.birthdate
     def setBirthdate(self,birthdate):
@@ -31,19 +33,22 @@ class Human:
     def getTel(self):
             return self.tel
     def setTel(self,tel):
-        self.tel = tel
+            self.tel = tel
     def getCountry(self):
             return self.country
     def setCountry(self,country):
-        self.country = country
+            self.country = country
     def getCity(self):
             return self.city
     def setCity(self,city):
-        self.city = city
+            self.city = city
     def gethome_address(self):
             return self.home_address
     def sethome_address(self,home_address):
-        self.home_address = home_address
+            self.home_address = home_address
+    @staticmethod
+    def getcount():
+         return Human.count
 
     
 hum1=Human()
@@ -52,3 +57,10 @@ hum1.input_data()
 print("\nВведені дані:")
 hum1.display_data()
 
+hum2=Human()
+hum2.input_data()
+
+print("\nВведені дані:")
+hum2.display_data()
+
+print ("Кільсть створених: ", Human.getcount())

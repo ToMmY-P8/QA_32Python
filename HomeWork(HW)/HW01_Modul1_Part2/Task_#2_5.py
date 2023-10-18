@@ -1,3 +1,5 @@
+# Завдання №2.5
+
 print(
 "“Life is what happens\n"
 "      when\n"
